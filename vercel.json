@@ -7,8 +7,8 @@
       "use": "@vercel/go"
     },
     {
-      "src": "/api/v1/{chat,image}.go",
-      "use": "@vercel/go"
+      "src": "/api/v1/*.js",
+      "use": "@vercel/edge"
     }
   ],
   "routes": [
@@ -30,11 +30,11 @@
     },
     {
       "src": "/v1/chat/completions",
-      "dest": "/api/v1/chat.go"
+      "dest": "/api/v1/chat.js"
     },
     {
       "src": "/api/v1/chat/completions",
-      "dest": "/api/v1/chat.go"
+      "dest": "/api/v1/chat.js"
     },
     {
       "src": "/v1/images/generations",
